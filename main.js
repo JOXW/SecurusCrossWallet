@@ -10,15 +10,15 @@ let win
 function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
-        width: 1000,
-        height: 600,
+        width: 1200,
+        height: 800,
         webPreferences: {
             nodeIntegration: true
         }
     })
 
     // and load the index.html of the app.
-    win.loadFile('src/index.html')
+    win.loadFile('src/html/index.html')
 
     // Emitted when the window is closed.
     win.on('closed', () => {
