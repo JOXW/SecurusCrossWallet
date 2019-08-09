@@ -10,8 +10,9 @@ let win
 function createWindow() {
     // Create the browser window.
     win = new BrowserWindow({
-        width: 1200,
-        height: 800,
+        width: 1400,
+        height: 900,
+        icon: 'src/assets/icon.ico',
         webPreferences: {
             nodeIntegration: true
         }
@@ -26,26 +27,23 @@ function createWindow() {
     })
 
     // Top Menu
-    var menu = Menu.buildFromTemplate([
-        {
-            label: 'Menu',
-            submenu: [
-                {
-                    label: 'Website',
-                    click(){
-                        shell.openExternal('http://securuscoin.org/')
-                    }
-                },
-                {type: 'separator'},
-                {
-                    label: 'Exit',
-                    click() {
-                        app.quit();
-                    }
-                }                
-            ]
-        }
-    ])
+    var menu = Menu.buildFromTemplate([{
+        label: 'Menu',
+        submenu: [{
+                label: 'Website',
+                click() {
+                    shell.openExternal('http://securuscoin.org/')
+                }
+            },
+            { type: 'separator' },
+            {
+                label: 'Exit',
+                click() {
+                    app.quit();
+                }
+            }
+        ]
+    }])
 
     //pick menu if Menu is wanted
     Menu.setApplicationMenu(null);
