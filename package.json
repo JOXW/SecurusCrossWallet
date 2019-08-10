@@ -19,5 +19,8 @@
   "homepage": "https://github.com/JOXW/SecurusCrossWallet#readme",
   "devDependencies": {
     "electron": "6.0.1"
+  },
+  "dependencies": {
+    "@trodi/electron-splashscreen": "^0.3.4"
   }
 }
