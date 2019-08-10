@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Securus Wallet</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="row">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+            <div id="name-container">
+                <p class="subtext">Securus</p>
+                <h1 id="price">Wallet Loading...</h1>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="index.html">Home</a>
+        <a href="balance.html">Balance</a>
+        <a href="adress.html">Adress</a>
+        <a href="backup.html">Backup</a>
+        <a href="transfer.html">Transfer</a>
+        <a href="#">Exit</a>
+    </div>
+
+    <script>
+        function openNav() {
+            if (document.getElementById("mySidenav").style.width == "250px") {
+                document.getElementById("mySidenav").style.width = "0px";
+            } else {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+        }
+    </script>
+
+    <!-- PageContentStart -->
+    <h1>Balance</h1>
+    <!-- PageContentEnd -->
+
+</body>
+
+</html>
