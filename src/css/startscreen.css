@@ -1,27 +1,85 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
-body {
-    background: #262626;
-    color: #fff;
-    font-family: 'Montserrat';
-    margin: 0;
-}
-
-.row {
-    width: 100%;
-    margin-top: 0px;
-    background: #1A1A1A;
-    border-bottom: 3px solid orangered;
-    display: grid;
-    grid-template-columns: 35% auto 35%;
-    align-items: center;
-}
-
-.right {
-    text-align: right;
-    padding-right: 30px;
-}
-
-#name-container {
-    background: #353535;
-    text-align: center;
-}
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:300,600');
+    body {
+        background: #262626;
+        color: #fff;
+        font-family: 'Montserrat';
+        margin: 0;
+    }
+    
+    .row {
+        width: 100%;
+        margin-top: 0px;
+        background: #1A1A1A;
+        border-bottom: 3px solid orangered;
+        display: grid;
+        grid-template-columns: 35% auto 35%;
+        align-items: center;
+    }
+    
+    .right {
+        text-align: right;
+        padding-right: 30px;
+    }
+    
+    #name-container {
+        background: #353535;
+        text-align: center;
+    }
+    
+    nav {
+        float: left;
+        width: 60%;
+        height: 300px;
+        padding: 30px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    article {
+        float: right;
+        padding: 30px;
+        width: 30%;
+        height: 300px;
+        margin-top: 350px;
+    }
+    
+    section:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    section {
+        margin-top: 50px;
+    }
+    
+    footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: orangered;
+        color: white;
+        text-align: center;
+    }
+    
+    .button {
+        background-color: orangered;
+        width: 100%;
+        border: none;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    
+    .button2 {
+        background-color: orange;
+    }
