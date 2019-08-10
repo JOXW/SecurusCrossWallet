@@ -6,14 +6,28 @@ body {
     margin: 0;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+
 .row {
     width: 100%;
     margin-top: 0px;
-    background: #1A1A1A;
-    border-bottom: 3px solid orangered;
+    background: orangered;
     display: grid;
     grid-template-columns: 35% auto 35%;
     align-items: center;
+}
+
+.row2 {
+    border-bottom: 3px solid orangered;
+    background: #1A1A1A;
 }
 
 .right {
@@ -59,57 +73,4 @@ body {
     background: #353535;
     padding: 0 0px;
     text-align: center;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-input[type=text],
-input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 10%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
 }
