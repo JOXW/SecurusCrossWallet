@@ -30,6 +30,11 @@ footer {
     background: #1A1A1A;
 }
 
+.row3 {
+    background:transparent;
+    width: 1200px;
+}
+
 .right {
     text-align: right;
     padding-right: 30px;
@@ -69,8 +74,75 @@ footer {
     margin-left: 50px;
 }
 
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.center2{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.center3{
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.center4{
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+.center5{
+    position: fixed;
+    top: 78%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=file], select {
+    width: 100%;
+    padding: 7px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 #name-container {
     background: #353535;
     padding: 0 0px;
-    text-align: center;
+    text-align: center;   
 }
