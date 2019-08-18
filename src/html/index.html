@@ -2,52 +2,149 @@
 <html>
 
 <head>
-    <!-- CSS stylesheets -->
+    <!-- #region StyleSheets-->
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/input.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/sidenav.css">
+    <!-- #endregion -->
 
-    <!-- HTML pages (each page contains a section) -->
-    <link rel="import" href="./adress.html">
-    <link rel="import" href="./backup.html">
-    <link rel="import" href="./balance.html">
-    <link rel="import" href="./home.html">
-    <link rel="import" href="./login.html">
-    <link rel="import" href="./startscreen.html">
-    <link rel="import" href="./transfer.html">
-    <link rel="import" href="./logintest.html">
-
+    <!-- #region Style -->
     <style>
-            @keyframes geboy {
-                0% {
-                    opacity: 0.2;
-                }
-                50% {
-                    opacity: 1;
-                }
-                100% {
-                    opacity: 0.2;
-                }
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        @keyframes geboy {
+            0% {
+                opacity: 0.2;
             }
-        </style>
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.2;
+            }
+        }
+    </style>
+    <!-- #endregion -->
+
+    <!-- #region Login-Template-->
+    <template id="loginTemplate">
+        <section class="section" id="section-login">
+            <div class="center center2">
+                <h1>Select the wallet file</h2>
+                    <input type="file">
+            </div>
+
+            <div class="center center3">
+                <h1>Wallet password</h2>
+                    <input type="password" size="44px" placeholder="Password to open this wallet...">
+            </div>
+
+            <div class="center center4">
+                <h1>Select node adress</h2>
+                    <select>
+                        <option value="volvoi">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+            </div>
+
+            <div class="center center5">
+                <div class="div">
+                    <button class="button">Open</button>
+                </div>
+            </div>
+        </section>
+    </template>
+    <!-- #endregion -->
+
+    <!-- #region StartScreen-Template-->
+    <template id="StartScreenTemplate">
+        <section>
+            <nav>
+                <h1>Welcome to Securus</h1>
+                <p>
+                    This software is a platform to create and manage your own Securus-Wallet. There are many features
+                    implemented, which you can use for transactions, creating backups, sharing your public adress and
+                    getting an overview, about your last actions. You are able
+                    to choose completely free, which node you want to use to manage your transactions.
+                </p>
+
+                <p>
+                    For More information about this wallet, the other software of Securus and the vision behind it,
+                    visit us on Github, or take a look on our homepage.
+                </p>
+
+                <p>
+                    Thank for beeing a part of our Community!
+                </p>
+            </nav>
+
+            <article>
+                <a href="login.html"><button class="button" style="font-size: 20px;">Open Wallet</button></a>
+                <a><button class="button button2" style="font-size: 20px;">Create Wallet</button></a>
+            </article>
+        </section>
+    </template>
+    <!-- #endregion -->
+
+    <!-- #region Adress-Template-->
+    <template id='AdressTemplate'>
+        <h1>Adress</h1>
+    </template>
+    <!-- #endregion -->
+
+    <!-- #region Backup-Template-->
+    <template id="BackupTemplate">
+        <h1>Backup</h1>
+    </template>
+    <!-- #endregion -->
+
+    <!-- #region Balance-Template-->
+    <template id="BalanceTemplate">
+        <h1>Balance</h1>
+    </template>
+    <!-- #endregion-->
+
+    <!-- #region Home-Template-->
+    <template id="HomeTemplate">
+        <h1>Home</h1>
+    </template>
+    <!-- #endregion -->
+
+    <!-- #region Transfer-Template-->
+    <template id="TranserTemplate">
+        <h1>Transfer</h1>
+    </template>
+
+    <!-- #endregion -->
 </head>
 
 <body>
-    <!--Top Bar-->
+    <!-- #region TopBar-->
     <div>
         <div class="row">
-            <h2>Version 0.0.1</h2>
+            <div id="name-test">
+                <h2>Version 0.0.1</h2>
+            </div>
             <div id="name-container">
                 <p class="subtext">Securus</p>
-                <h1 id="price">Open Wallet</h1>               
+                <h1 id="header">Open Wallet</h1>
             </div>
-            <img class="right" src="../assets/tray.png" style="width: 110px;height:110px;">
+            <div id="name-test">
+                    <img src="../assets/tray.png" style="width: 110px;height:110px;">
+            </div>           
         </div>
     </div>
+    <!-- #endregion -->
 
-    <!--Side Navigation-->
+    <!-- #region Side Navigation-->
     <div id="mySidenav" class="sidenav">
         <a href="home.html">Home</a>
         <a href="balance.html">Balance</a>
@@ -56,8 +153,9 @@
         <a href="transfer.html">Transfer</a>
         <a href="#">Exit</a>
     </div>
+    <!-- #endregion -->
 
-    <!--Open/Close Nav-Bar-->
+    <!-- #region ScriptNavbar-->
     <script>
         function openNav() {
             if (document.getElementById("mySidenav").style.width == "250px") {
@@ -67,15 +165,25 @@
             }
         }
     </script>
+    <!-- #endregion -->
 
-    <!-- Bottom Bar-->
+    <!-- #region Bottom Bar-->
     <footer>
         <p>securuscoin.org</p>
     </footer>
+    <!-- #endregion -->
 
-    <!-- Main Content -->
-    
+    <!-- #region Main Content-->
+    <script>
+        /*Changes the main content*/
+        let template = document.getElementById('StartScreenTemplate');
+        let templateContent = template.content;
+        document.body.appendChild(templateContent);
 
-    <script>require('../js/main.js')</script>
+        /*Changes the header*/
+        document.getElementById("header").innerHTML = "Welcome";
+    </script>
+    <!-- #endregion -->
 </body>
+
 </html>

@@ -33,7 +33,7 @@ section:after {
 }
 
 section {
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 footer {
@@ -50,6 +50,11 @@ footer {
 #name-container {
     background: #353535;
     padding: 0 0px;
+    text-align: center;
+}
+
+#name-test{
+    background: transparent;
     text-align: center;
 }
 
