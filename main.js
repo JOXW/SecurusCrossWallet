@@ -32,7 +32,7 @@ function createWindow() {
     });
 
     win.loadURL(url.format({
-        pathname: path.join(__dirname, 'src/html/startscreen.html'),
+        pathname: path.join(__dirname, 'src/html/index.html'),
         protocol: 'file:',
         slashes: true
     }));

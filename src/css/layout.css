@@ -1,0 +1,64 @@
+body {
+    background: #262626;
+    color: #fff;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+.row {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 0px;
+    background: #1A1A1A;
+    border-bottom: 3px solid orangered;
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    align-items: center;
+}
+
+article {
+    float: right;
+    padding: 30px;
+    width: 30%;
+    height: 300px;
+    margin-top: 350px;
+}
+
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section {
+    margin-top: 50px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #1A1A1A;
+    border-bottom: 3px solid orangered;
+    color: white;
+    text-align: center;
+}
+
+#name-container {
+    background: #353535;
+    padding: 0 0px;
+    text-align: center;
+}
+
+img {
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
+    animation: geboy normal 4s infinite ease-in-out;
+    animation-delay: 0.5s;
+    height: auto;
+    position: relative;
+    image-rendering: optimizeQuality;
+}

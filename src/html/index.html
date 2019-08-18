@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/input.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/sidenav.css">
+
+    <!-- HTML pages (each page contains a section) -->
+    <link rel="import" href="./adress.html">
+    <link rel="import" href="./backup.html">
+    <link rel="import" href="./balance.html">
+    <link rel="import" href="./home.html">
+    <link rel="import" href="./login.html">
+    <link rel="import" href="./startscreen.html">
+    <link rel="import" href="./transfer.html">
+    <link rel="import" href="./logintest.html">
+
+    <style>
+            @keyframes geboy {
+                0% {
+                    opacity: 0.2;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0.2;
+                }
+            }
+        </style>
+</head>
+
+<body>
+    <!--Top Bar-->
+    <div>
+        <div class="row">
+            <h2>Version 0.0.1</h2>
+            <div id="name-container">
+                <p class="subtext">Securus</p>
+                <h1 id="price">Open Wallet</h1>               
+            </div>
+            <img class="right" src="../assets/tray.png" style="width: 110px;height:110px;">
+        </div>
+    </div>
+
+    <!--Side Navigation-->
+    <div id="mySidenav" class="sidenav">
+        <a href="home.html">Home</a>
+        <a href="balance.html">Balance</a>
+        <a href="adress.html">Adress</a>
+        <a href="backup.html">Backup</a>
+        <a href="transfer.html">Transfer</a>
+        <a href="#">Exit</a>
+    </div>
+
+    <!--Open/Close Nav-Bar-->
+    <script>
+        function openNav() {
+            if (document.getElementById("mySidenav").style.width == "250px") {
+                document.getElementById("mySidenav").style.width = "0px";
+            } else {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+        }
+    </script>
+
+    <!-- Bottom Bar-->
+    <footer>
+        <p>securuscoin.org</p>
+    </footer>
+
+    <!-- Main Content -->
+    
+
+    <script>require('../js/main.js')</script>
+</body>
+</html>
