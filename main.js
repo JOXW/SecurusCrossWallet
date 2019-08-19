@@ -4,6 +4,7 @@ const url = require('url')
 const shell = require('electron').shell
 const splash = require('@trodi/electron-splashscreen');
 
+
 let win
 
 function createWindow() {

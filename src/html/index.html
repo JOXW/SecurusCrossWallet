@@ -33,7 +33,7 @@
     <!-- #endregion -->
 
     <!-- #region Login-Template-->
-    <template id="loginTemplate">
+    <template id="LoginTemplate">
         <section class="section" id="section-login">
             <div class="center center2">
                 <h1>Select the wallet file</h2>
@@ -87,8 +87,8 @@
             </nav>
 
             <article>
-                <a href="login.html"><button class="button" style="font-size: 20px;">Open Wallet</button></a>
-                <a><button class="button button2" style="font-size: 20px;">Create Wallet</button></a>
+                <button onclick="openPage('LoginTemplate', 'Open Wallet')" class="button" style="font-size: 20px;">Open Wallet</button>
+                <button onclick="removeChild()" class="button button2" style="font-size: 20px;">Create Wallet</button>
             </article>
         </section>
     </template>
@@ -126,7 +126,7 @@
     <!-- #endregion -->
 </head>
 
-<body>
+<body id="mainBody">
     <!-- #region TopBar-->
     <div>
         <div class="row">
@@ -138,8 +138,8 @@
                 <h1 id="header">Open Wallet</h1>
             </div>
             <div id="name-test">
-                    <img src="../assets/tray.png" style="width: 110px;height:110px;">
-            </div>           
+                <img src="../assets/tray.png" style="width: 110px;height:110px;">
+            </div>
         </div>
     </div>
     <!-- #endregion -->
@@ -174,15 +174,10 @@
     <!-- #endregion -->
 
     <!-- #region Main Content-->
-    <script>
-        /*Changes the main content*/
-        let template = document.getElementById('StartScreenTemplate');
-        let templateContent = template.content;
-        document.body.appendChild(templateContent);
-
-        /*Changes the header*/
-        document.getElementById("header").innerHTML = "Welcome";
-    </script>
+    <div id="mainDiv">
+        <script type="text/javascript" src="../js/pagemanager.js">     
+        </script>
+    </div>
     <!-- #endregion -->
 </body>
 
