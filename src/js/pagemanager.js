@@ -51,6 +51,8 @@ function openPage(PageName, Header) {
 //#region Login Template Data
 function LoadNodes() {
     var nodeList = document.getElementById('nodeList');
+    var password = document.getElementById('password');
+    var walletPath = document.getElementById('filePath');
 
     var xmlhttp = new XMLHttpRequest();
     var url = 'https://raw.githubusercontent.com/JOXW/securuscoin_nodes/master/securuscoin_nodes.json';
@@ -68,21 +70,28 @@ function LoadNodes() {
     function myFunction(arr) {
         var nodeArray = new Array(arr.nodes.length);
 
-        for(i in arr.nodes){
+        for (i in arr.nodes) {
             var singleNode = new Array(4);
             singleNode[0] = arr.nodes[i].name;
             singleNode[1] = arr.nodes[i].url;
             singleNode[2] = arr.nodes[i].port;
             singleNode[3] = arr.nodes[i].ssl;
             nodeArray[i] = singleNode;
-        }    
+        }
 
-        for(i in nodeArray){
+        for (i in nodeArray) {
             var opt = document.createElement('option');
-            opt.value = nodeArray[i];
-            opt.innerHTML = nodeArray[i];
+            opt.value = nodeArray[i][1];
+            opt.innerHTML = nodeArray[i][1];
             nodeList.appendChild(opt);
         }
-    }   
+    }
+}
+
+function openWallet() {
+    // alert(nodeList.value);
+    // alert(walletPath.value);
+    // alert(password.value);
+    openPage('HomeTemplate', 'Home');
 }
 //#endregion

@@ -37,12 +37,12 @@
         <section class="section" id="section-login">
             <div class="center center2">
                 <h1>Select the wallet file</h2>
-                    <input type="file">
+                    <input type="file" id="walletPath">
             </div>
 
             <div class="center center3">
                 <h1>Wallet password</h2>
-                    <input type="password" size="44px" placeholder="Password to open this wallet...">
+                    <input type="password" size="44px" placeholder="Password to open this wallet..." id="password">
             </div>
 
             <div class="center center4">
@@ -52,7 +52,7 @@
 
             <div class="center center5">
                 <div class="div">
-                    <button class="button">Open</button>
+                    <button class="button" onclick="openWallet()">Open</button>
                 </div>
             </div>
         </section>
@@ -82,7 +82,8 @@
             </nav>
 
             <article>
-                <button onclick="openPage('LoginTemplate', 'Open Wallet')" class="button" style="font-size: 20px;">Open Wallet</button>
+                <button onclick="openPage('LoginTemplate', 'Open Wallet')" class="button" style="font-size: 20px;">Open
+                    Wallet</button>
                 <button onclick="removeChild()" class="button button2" style="font-size: 20px;">Create Wallet</button>
             </article>
         </section>
@@ -109,7 +110,14 @@
 
     <!-- #region Home-Template-->
     <template id="HomeTemplate">
-        <h1>Home</h1>
+        <section>
+            <div>
+                <button onclick="openNav()">Test</button>
+            </div>
+            <div>
+                <h1>Home</h1>
+            </div>
+        </section>
     </template>
     <!-- #endregion -->
 
@@ -139,8 +147,9 @@
     </div>
     <!-- #endregion -->
 
-    <!-- #region Side Navigation-->
+    <!-- #region Side Navigation -->
     <div id="mySidenav" class="sidenav">
+        <button onclick="openNav()">Back</button>
         <a href="home.html">Home</a>
         <a href="balance.html">Balance</a>
         <a href="adress.html">Adress</a>
@@ -170,8 +179,7 @@
 
     <!-- #region Main Content-->
     <div id="mainDiv">
-        <script type="text/javascript" src="../js/pagemanager.js">     
-        </script>
+        <script type="text/javascript" src="../js/pagemanager.js"></script>
     </div>
     <!-- #endregion -->
 </body>
