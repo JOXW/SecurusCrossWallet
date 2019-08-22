@@ -34,7 +34,7 @@ function openPage(PageName, Header) {
             break;
         case ('StartScreenTemplate'):
             break;
-        case ('AdressTemplate'):
+        case ('AddressTemplate'):
             break;
         case ('BackupTemplate'):
             break;
@@ -45,6 +45,10 @@ function openPage(PageName, Header) {
         case ('TranserTemplate'):
             break;
     }
+}
+
+function exit() {
+    window.close();
 }
 //#endregion
 
@@ -92,6 +96,6 @@ function openWallet() {
     // alert(nodeList.value);
     // alert(walletPath.value);
     // alert(password.value);
-    openPage('HomeTemplate', 'Home');
+    openPage('BalanceTemplate', 'Balance');
 }
 //#endregion

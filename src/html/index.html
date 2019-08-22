@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/input.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/sidenav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- #endregion -->
 
     <!-- #region Style -->
@@ -90,29 +91,66 @@
     </template>
     <!-- #endregion -->
 
-    <!-- #region Adress-Template-->
-    <template id='AdressTemplate'>
-        <h1>Adress</h1>
+    <!-- #region Address-Template-->
+    <template id='AddressTemplate'>
+        <section class="section navBar">
+            <div>
+                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
+            </div>
+            <div>
+                <h1>Adress</h1>
+            </div>
+        </section>
     </template>
     <!-- #endregion -->
 
     <!-- #region Backup-Template-->
     <template id="BackupTemplate">
-        <h1>Backup</h1>
+        <section class="section navBar">
+            <div>
+                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
+            </div>
+            <div>
+                <h1>Backup</h1>
+            </div>
+        </section>
     </template>
     <!-- #endregion -->
 
     <!-- #region Balance-Template-->
     <template id="BalanceTemplate">
-        <h1>Balance</h1>
+        <section class="section navBar">
+            <div>
+                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9; Menue</i>
+            </div>
+            <article class="balance1">
+                <div>
+                    <h1 style="font-size: 30;">Address</h1>
+                    <input type="text" size="44px" placeholder="asdawd22adsavv4353g243gqewfasda212423rf24f234g243tg123gdsfawdf21asgfhrjn6543" id="publicAdress">
+                </div>
+            </article>
+            <article class="balance2">
+                <div>
+                    <h1 style="font-size: 30;">Balance</h1>
+                    <input type="text" size="44px" placeholder="50.000" id="BookedBalance">
+                    <input type="text" size="44px" placeholder="13.247" style="margin-top: 20px;" id="unbookedBalance">
+                </div>
+            </article>
+            <article class="balance3">
+                    <div>
+                        <h1 style="font-size: 30;">QR</h1>
+                        <img class="balance" src="../assets/demoQR.png" style="width: 110px;height:110px;">
+                    </div>
+                </article>
+        </section>
     </template>
     <!-- #endregion-->
 
     <!-- #region Home-Template-->
     <template id="HomeTemplate">
-        <section>
+        <section class="section navBar">
             <div>
-                <button onclick="openNav()">Test</button>
+                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
             </div>
             <div>
                 <h1>Home</h1>
@@ -123,7 +161,14 @@
 
     <!-- #region Transfer-Template-->
     <template id="TranserTemplate">
-        <h1>Transfer</h1>
+        <section class="section navBar">
+            <div>
+                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
+            </div>
+            <div>
+                <h1>Transfer</h1>
+            </div>
+        </section>
     </template>
 
     <!-- #endregion -->
@@ -149,13 +194,13 @@
 
     <!-- #region Side Navigation -->
     <div id="mySidenav" class="sidenav">
-        <button onclick="openNav()">Back</button>
-        <a href="home.html">Home</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
+        <a href="home.html" style="margin-top: 40px">Home</a>
         <a href="balance.html">Balance</a>
-        <a href="adress.html">Adress</a>
+        <a href="adress.html">Address</a>
         <a href="backup.html">Backup</a>
         <a href="transfer.html">Transfer</a>
-        <a href="#">Exit</a>
+        <a href="javascript:void(0)" onclick="exit()">Exit</a>
     </div>
     <!-- #endregion -->
 
