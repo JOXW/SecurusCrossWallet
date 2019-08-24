@@ -1,9 +1,8 @@
-const { app, BrowserWindow, Menu } = require('electron')
+const { app, dialog, Tray, Menu } = require('electron');
 const path = require('path')
 const url = require('url')
 const shell = require('electron').shell
 const splash = require('@trodi/electron-splashscreen');
-
 
 let win
 
@@ -18,6 +17,9 @@ function createWindow() {
         center: true,
         autoHideMenuBar: false,
         menuBarVisibility: false,
+        webPreferences: {
+            nodeIntegration: true
+          }
     };
 
     win = splash.initSplashScreen({
@@ -39,7 +41,7 @@ function createWindow() {
     }));
 
     //open devtools
-    //win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
     win.once('ready-to-show', () => {
         //win.show();
@@ -57,7 +59,9 @@ function createWindow() {
     win.setMenu(null);
 }
 
-app.on('ready', createWindow)
+app.on('ready', () => {
+    createWindow();
+});
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {

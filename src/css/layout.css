@@ -28,30 +28,34 @@ article {
 
 article.balance1{
     float: none;
-    padding: 0px;
-    width: 100%;
-    height: 200px;
-    margin-top: 30px;
-    background: slateblue;
+    padding: 5px;
+    width: auto;
+    margin: auto;
+    margin-top: 40px;
+    height: 20%;
+    border: 2px solid orangered;
+    background: transparent;
 }
 
 article.balance2{
     float: none;
     padding: 5px;
-    width: 45%;
-    height: 300px;
+    width: 50%;
+    height: auto;
     margin-top: 20px;
-    background: red;
+    border: 2px solid orangered;
+    background: transparent;
     display: inline-block;
 }
 
 article.balance3{
     float: right;
     padding: 5px;
-    width: 45%;
-    height: 300px;
+    width: auto;
+    height: auto;
     margin-top: 20px;
-    background: green;
+    border: 2px solid orangered;
+    background: transparent;
 }
 
 section:after {
@@ -107,4 +111,12 @@ img.balance{
     animation-delay: 0.5s;
     position: inherit;
     image-rendering: optimizeQuality;
+}
+
+div.headline{
+    font-size: 40px;
+}
+
+table, th, td {
+    border-collapse: collapse;
 }
