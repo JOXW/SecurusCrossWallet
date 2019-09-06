@@ -2,21 +2,28 @@
 <html>
 
 <head>
-    <!-- #region StyleSheets-->
-    <link rel="stylesheet" href="../css/buttons.css">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/input.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/sidenav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- #region Meta-->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self' 'unsafe-inline'; font-src 'self'; 
+            connect-src 'self' http: https:; img-src 'self' file: data:; style-src 'self' 'unsafe-inline'; media-src 'self'">
+    <script defer src="../js/extras/fontawesome-solid.min.js"></script>
     <!-- #endregion -->
 
-    <!-- #region Style -->
-    <style>
-        * {
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
+    <!-- #region StyleSheets-->
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/topbar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/template.css">
+    <link rel="stylesheet" href="../css/font-notosans.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/dark.css">
+    <link rel="stylesheet" href="../css/ag-grid.css">
+    <link rel="stylesheet" href="../css/ag-theme-balham-dark.css">
+    <!-- #endregion -->
 
+    <!-- #region Style-->
+    <style>
         @keyframes geboy {
             0% {
                 opacity: 0.2;
@@ -33,178 +40,38 @@
     </style>
     <!-- #endregion -->
 
-    <!-- #region Login-Template-->
-    <template id="LoginTemplate">
-        <section class="section" id="section-login">
-            <div class="center center2">
-                <h1>Select the wallet file</h2>
-                    <input type="file" id="walletPath">
-            </div>
-
-            <div class="center center3">
-                <h1>Wallet password</h2>
-                    <input type="password" size="44px" placeholder="Password to open this wallet..." id="password">
-            </div>
-
-            <div class="center center4">
-                <h1>Select node adress</h2>
-                    <select id="nodeList"></select>
-            </div>
-
-            <div class="center center5">
-                <div class="div">
-                    <button class="button" onclick="openWallet()">Open</button>
-                </div>
-            </div>
-        </section>
-    </template>
-    <!-- #endregion -->
-
-    <!-- #region StartScreen-Template-->
-    <template id="StartScreenTemplate">
-        <section>
-            <nav>
-                <h1>Welcome to Securus</h1>
-                <p>
-                    This software is a platform to create and manage your own Securus-Wallet. There are many features
-                    implemented, which you can use for transactions, creating backups, sharing your public adress and
-                    getting an overview, about your last actions. You are able
-                    to choose completely free, which node you want to use to manage your transactions.
-                </p>
-
-                <p>
-                    For More information about this wallet, the other software of Securus and the vision behind it,
-                    visit us on Github, or take a look on our homepage.
-                </p>
-
-                <p>
-                    Thank for beeing a part of our Community!
-                </p>
-            </nav>
-
-            <article>
-                <button onclick="openPage('LoginTemplate', 'Open Wallet')" class="button" style="font-size: 20px;">Open
-                    Wallet</button>
-                <button onclick="removeChild()" class="button button2" style="font-size: 20px;">Create Wallet</button>
-            </article>
-        </section>
-    </template>
-    <!-- #endregion -->
-
-    <!-- #region Address-Template-->
-    <template id='AddressTemplate'>
-        <section class="section navBar">
-            <div>
-                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
-            </div>
-            <div>
-                <h1>Adress</h1>
-            </div>
-        </section>
-    </template>
-    <!-- #endregion -->
-
-    <!-- #region Backup-Template-->
-    <template id="BackupTemplate">
-        <section class="section navBar">
-            <div>
-                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
-            </div>
-            <div>
-                <h1>Backup</h1>
-            </div>
-        </section>
-    </template>
-    <!-- #endregion -->
-
-    <!-- #region Balance-Template-->
-    <template id="BalanceTemplate">
-        <section class="section navBar">
-            <div>
-                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9; Menue</i>
-            </div>
-            <article class="balance1">
-                <div>
-                    <div class="headline">Address</div>
-                    <input type="text" size="44px"
-                        placeholder="asdawd22adsavv4353g243gqewfasda212423rf24f234g243tg123gdsfawdf21asgfhrjn6543"
-                        style="margin: auto; height: 50px; font-size: 18px;" id="publicAdress">
-                </div>
-            </article>
-            <article class="balance2">
-                <div>
-                    <div class="headline">Balance</div>
-                    <input type="text" class="fa" size="44px" placeholder="&#xf09c; 50.000" style="padding: 5px; height: 50px; font-size: 18px;"
-                        id="BookedBalance">
-                    <input type="text" class="fa" size="44px" placeholder="&#xf023; 13.247"
-                        style="margin-top: 20px; padding: 5px; height: 50px; font-size: 18px;" id="unbookedBalance">
-                </div>
-            </article>
-            <article class="balance3">
-                <div>
-                    <img class="balance" src="../assets/demoQR.png" style="width: 400px;height:400px;">
-                </div>
-            </article>
-            <article class="balance2">
-                <div>
-                    <div class="headline">Info</div>
-                    <table style="width:100%">
-                        <tr>
-                            <td style="font-size: 18px;">Synced</td>
-                            <td style="font-size: 18px; text-align: right;">212456/212459</td>
-                        </tr>
-                        <tr>
-                            <td style="font-size: 18px;">Connected to</td>
-                            <td style="font-size: 18px; text-align: right;">securuscoin.org:14115</td>
-                        </tr>
-                    </table>
-                </div>
-            </article>
-        </section>
-    </template>
-    <!-- #endregion-->
-
-    <!-- #region Home-Template-->
-    <template id="HomeTemplate">
-        <section class="section navBar">
-            <div>
-                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
-            </div>
-            <div>
-                <h1>Home</h1>
-            </div>
-        </section>
-    </template>
-    <!-- #endregion -->
-
-    <!-- #region Transfer-Template-->
-    <template id="TranserTemplate">
-        <section class="section navBar">
-            <div>
-                <i onclick="openNav()" style="cursor: pointer; font-size:30px" class="fa">&#xf0c9 Menue</i>
-            </div>
-            <div>
-                <h1>Transfer</h1>
-            </div>
-        </section>
-    </template>
-
+    <!-- #region Templates-->
+    <link rel="import" href="./about.html">
+    <link rel="import" href="./settings.html">
+    <link rel="import" href="./transactions.html">
+    <link rel="import" href="./send.html">
+    <link rel="import" href="./welcome.html">
+    <link rel="import" href="./overview.html">
+    <link rel="import" href="./overview_load.html">
+    <link rel="import" href="./overview_show.html">
+    <link rel="import" href="./overview_import_key.html">
+    <link rel="import" href="./overview_import_seed.html">
+    <link rel="import" href="./overview_create.html">
+    <link rel="import" href="./address_book.html">
+    <link rel="import" href="./address_book_add.html">
+    <link rel="import" href="./shortcuts.html">
     <!-- #endregion -->
 </head>
 
-<body id="mainBody">
+<body>
     <!-- #region TopBar-->
     <div>
         <div class="row">
-            <div id="name-test">
-                <h2>Version 0.0.1</h2>
+            <div class="idle" id="navbar-div-sync" style="text-align: center">
+                <i class="fas fa-pause-circle" id="navbar-icon-sync"></i>
+                <span tabindex="-1" id="navbar-text-sync">IDLE</span>
             </div>
             <div id="name-container">
                 <p class="subtext">Securus</p>
-                <h1 id="header">Open Wallet</h1>
+                <h1 id="header">Welcome</h1>
             </div>
-            <div id="name-test">
-                <img src="../assets/tray.png" style="width: 110px;height:110px;">
+            <div id="name-topBarImage">
+                <img src="../assets/tray.png" class="topbar" style="width: 110px;height:110px;">
             </div>
         </div>
     </div>
@@ -213,12 +80,20 @@
     <!-- #region Side Navigation -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
-        <a href="home.html" style="margin-top: 40px">Home</a>
-        <a href="balance.html">Balance</a>
-        <a href="adress.html">Address</a>
-        <a href="backup.html">Backup</a>
-        <a href="transfer.html">Transfer</a>
-        <a href="javascript:void(0)" onclick="exit()">Exit</a>
+
+        <a data-section="section-overview" id="button-section-overview" style="margin-top: 50px;">Wallet</a>
+
+        <a data-section="section-addressbook" id="button-section-addressbook">Adressbook</a>
+
+        <a data-section="section-send" id="button-section-send">Send</a>
+
+        <a data-section="section-transactions" id="button-section-transactions">Transactions</a>
+
+        <a data-section="section-settings" id="button-section-settings">Settings</a>
+
+        <a id="button-section-about">About</a>
+
+        <a id="kswitch">Shortcuts</a>
     </div>
     <!-- #endregion -->
 
@@ -240,10 +115,27 @@
     </footer>
     <!-- #endregion -->
 
-    <!-- #region Main Content-->
-    <div id="mainDiv">
-        <script type="text/javascript" src="../js/pagemanager.js"></script>
-    </div>
+    <!-- #region Actual Template-->
+    <div id="belekok" class="borokokok off"></div>
+    <!-- #endregion -->
+
+    <!-- #region Dialogs-->
+    <dialog id="main-dialog" class="default-dialog"></dialog>
+    <dialog id="tx-dialog" class="tx-dialog"></dialog>
+    <dialog id="ab-dialog" class="default-dialog address-book-dialog"></dialog>
+    <dialog id="tf-dialog" class="tx-dialog"></dialog>
+    <!-- #endregion -->
+
+    <!-- #region Active Template-->
+    <div id="main-div"></div>
+    <!-- #endregion -->
+
+    <!-- #region Connection Info-->
+    <div id="conn-info" class="status-node-info empty"></div>
+    <!-- #endregion -->
+
+    <!-- #region Script-->
+    <script>require('../js/wsui_main.js')</script>
     <!-- #endregion -->
 </body>
 

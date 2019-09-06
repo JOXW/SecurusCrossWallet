@@ -1,0 +1,55 @@
+<template>
+    <section class="section Wallet" id="section-overview">
+        <div class="section-contents">
+            <div class="div-overview-address">
+                <div class="input-wrap" style="margin-top:0">
+                    <h2 class="title">Address:</h2>
+                    <textarea title="click to copy" data-cplabel="Wallet Address" tabindex="-1" data-noclear="1"
+                        class="ctcl overview-input default-textarea" id="wallet-address" readonly="readonly"
+                        rows="2"></textarea>
+                    <span id="form-help-wallet-address" class="form-help"></span>
+                    <a id="integrated-wallet-gen" class="wallet-tool form-help align-right">Generate Integrated
+                        Address</a>
+                    <a id="payment-id-gen" class="wallet-tool form-help align-right">Generate Payment ID</a>
+                </div>
+            </div>
+
+            <div class="main-balance-overview">
+                <div class="div-overview-balance">
+                    <h2 class="title">Balance:</h2>
+                    <h4 class="text-block" id="balance-available" title="Available Balance">
+                        <i class="fas fa-unlock-alt"></i> TRTL
+                        <span data-cplabel="Balance" style="float: right; color:#98ef8b;" class="tctcl">0.00</span>
+                    </h4>
+                    <h4 class="text-block" id="balance-locked" title="Unconfirmed/Locked Balance">
+                        <i class="fas fa-lock"></i> TRTL
+                        <span data-cplabel="Locked balance" style="float: right; color:#f39c12;"
+                            class="tctcl">0.00</span>
+                    </h4>
+                </div>
+
+                <div class="div-main-address-qr" id="div-w-qr">
+                    <span class="form-help form-help-qr hidden" id="scan-qr-help">Scan to share your address</span>
+                </div>
+            </div>
+            <div class="input-wrap button-wrap">
+                <button tabindex="0" type="button" class="form-bt button-green" data-section="section-overview-show"
+                    title="Backup your private keys, YOU REALLY HAVE TO DO THIS! (ctrl+e)"
+                    id="button-overview-showkeys">Backup Keys</button>
+                <button tabindex="0" type="button" class="form-bt button-green"
+                    title="Rescan transactions from specific block height. Only do this if you know what you are doing"
+                    id="button-overview-rescan">Rescan</button>
+                <button tabindex="0" type="button" class="form-bt button-green"
+                    title="Perform wallet optimization. Try this if you get &quot;Transaction size too big&quot; error when sending funds"
+                    id="button-send-optimize">Optimize</button>
+                <button tabindex="0" type="button" class="form-bt  button-green"
+                    title="Close current wallet, so you can open another wallet (ctrl+x)"
+                    id="button-overview-closewallet">Close</button>
+                <div id="fusionProgress" class="fusion-progress hidden">
+                    <i class="fas fa-cogs fa-spin"></i> Wallet optimization in progress <i
+                        class="fas fa-cogs fa-spin"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

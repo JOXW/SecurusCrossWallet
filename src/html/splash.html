@@ -1,27 +1,50 @@
 <!doctype html>
 <html>
-
-<head>
-        <link rel="stylesheet" href="../css/splash.css">
-
-    <style>
-        @keyframes geboy {
-            0% {
-                opacity: 0.2;
+    <head>
+        
+        <style>
+            * { box-sizing: border-box; }
+            @keyframes geboy {0%{opacity:0.2;} 50%{opacity:1;} 100%{opacity:0.2;}}
+            html,body{margin: 0; padding: 0;}
+            body{
+                height: 606px;
+                width: 1092px;
+                background: #000 url(../assets/securus_bg.png) 50% 50% no-repeat;
+                text-align: center;
+                margin: 0 auto;
+                position: relative;
+                font-family: sans-serif;
             }
-            50% {
-                opacity: 1;
+            #wsVersion{
+                position: absolute;
+                bottom: 55px;
+                left: 138px;
+                color: #f47824;
+                font-size: 14px;
+                text-shadow: 1px 1px 1px #888;
+                opacity: 0.5;
             }
-            100% {
-                opacity: 0.2;
-            }
-        }
-    </style>
-
-</head>
-
-<body>
+            img {
+                opacity: 0.1;
+                transition:all 0.5s ease-in-out;
+                animation:geboy normal 4s infinite ease-in-out;
+                animation-delay: 0.5s;
+                width:250px;
+                height:auto;
+                position:relative;
+                left:-10px;
+                top:500px;
+                image-rendering: optimizeQuality;
+            }​
+        </style>
+    </head>
+    <body>
     <img src="../assets/splash_logo.png" />
-</body>
+    <span id="wsVersion"></span>
 
+    <script>
+        let remote = require('electron').remote;
+        document.getElementById('wsVersion').innerHTML = remote.app.getVersion();
+    </script>
+    </body>
 </html>

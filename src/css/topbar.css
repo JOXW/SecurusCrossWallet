@@ -1,0 +1,44 @@
+.row {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 0px;
+    background: #323232;
+    border-bottom: 3px solid #e67e22;
+    display: grid;
+    grid-template-columns: 33% auto 33%;
+    align-items: center;
+}
+
+#name-container {
+    color: whitesmoke;
+    background: #323232;
+    padding: 0 0px;
+    text-align: center;
+}
+
+#name-topBarImage{
+    background: transparent;
+    text-align: center;
+}
+
+img.topbar{
+    top: 0;
+    right: 0;
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
+    animation: geboy normal 4s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #323232;
+    border-top: 3px solid #e67e22;
+    color: white;
+    text-align: center;
+}

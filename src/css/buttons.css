@@ -1,5 +1,5 @@
-.button {
-    background-color: orangered;
+button {
+    background-color: #e67e22;
     width: 100%;
     border: none;
     color: white;
@@ -12,6 +12,12 @@
     cursor: pointer;
 }
 
-.button2 {
-    background-color: orange;
+.button-entrance{
+    width: 40%;
+    border-radius: 20px;
+}
+
+.button-openWallet{
+    width: 50%;
+    border-radius: 20px;
 }

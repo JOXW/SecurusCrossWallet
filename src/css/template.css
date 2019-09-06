@@ -1,0 +1,121 @@
+section {
+    width:100%;
+    height:100%;
+    flex-basis:100%;
+    flex-grow:1;
+    order:100;
+    pointer-events: none;
+    opacity:0;
+    visibility:hidden;
+    user-select: none;
+    color: white;
+}
+
+section.entrance{
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+section.openWallet{
+    margin: 0 auto;
+    padding: 150px;
+}
+
+section.Wallet{
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.div-entrance{
+    margin-top: 50px;
+    float: right;
+}
+
+.div-openWallet{
+    width: 100%;
+}
+
+.text-block {
+    padding: 12px 10px;
+    margin: 8px 0;
+    border: 1px solid #e67e22;
+    border-radius: 15px;
+    color: white;
+    /* background-color: rgba(53, 53, 53, 0.39); */
+    background: transparent;
+}
+
+.path-input {
+    width: 90%;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+.path-input-button,.button-browse {
+    display: inline-block;
+    border: 1px solid #e67e22;
+    padding: 0.65rem 0.75rem;
+}
+input.path-input-button{
+    display:inline-block;
+    cursor: default;
+}
+
+.fake-node-options{
+    position: absolute;
+    width: 100%;
+    left:0;
+}
+.fake-node-options ul{
+    max-height: 160px;
+    width:100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+    position: absolute;
+    background-color: gray;
+    border: 1px solid #929292cc;
+    z-index: 1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.fake-node-options ul li{
+    margin: 0;
+    padding: 6px 12px;
+    border-bottom: 1px dashed #7575756e;
+    font-size: 1rem;
+}
+
+.fake-node-options ul li:nth-child(odd){
+    background: #323232;
+    color: #eee;
+}
+
+.fake-node-options ul li:hover{
+    background: #e67e22;
+    text-shadow: 0px 1px 1px #1c1f20;
+}
+.fake-node-options ul li span.node-address{
+    color: #fff;
+    display: inline-block;
+}
+.fake-node-options ul li span.node-info{
+    text-align:right;
+    width: 28%;
+    display:inline-block;
+    opacity: .5;
+    transition: opacity .2s linear;
+    float: right;
+}
+.fake-node-options ul li:hover span.node-info{
+    opacity: 1;
+}
+
+.fake-node-options ul li:hover span.node-address{
+    color: #fff;
+}

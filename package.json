@@ -1,27 +1,92 @@
 {
-  "name": "securuscrosswallet",
-  "version": "1.0.0",
-  "description": "",
+  "name": "securuscoin",
+  "productName": "Securus Wallet",
+  "description": "Securus GUI Wallet",
+  "version": "v1.0.4",
+  "homepage": "www.securuscoin.org",
+  "repository": "www.securuscoin.org",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JOXW/SecurusCrossWallet.git"
+    "start": "electron .",
+    "debug": "electron . debug",
+    "dev": "electron . dev",
+    "dist-win": "./node_modules/.bin/electron-builder --x64 --win -c.extraResources=./bin/win/securus-service.exe",
+    "dist-lin": "./node_modules/.bin/electron-builder --x64 --linux -c.extraResources=./bin/lin/securus-service",
+    "dist-mac": "./node_modules/.bin/electron-builder --x64 --mac -c.extraResources=./bin/osx/securus-service"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rixombea, Macroshock, TurtleCoin Developers, Securus Project",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JOXW/SecurusCrossWallet/issues"
-  },
-  "homepage": "https://github.com/JOXW/SecurusCrossWallet#readme",
   "devDependencies": {
-    "electron": "6.0.1"
+    "devtron": "^1.4.0",
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5",
+    "jshint": "^2.10.1"
   },
   "dependencies": {
     "@trodi/electron-splashscreen": "^0.3.4",
-    "pbkdf2": "^3.0.17"
-  }
+    "ag-grid-community": "^19.1.4",
+    "async": "^2.6.2",
+    "csv-writer": "^1.2.0",
+    "electron-log": "^2.2.17",
+    "electron-store": "^2.0.0",
+    "fnv-plus": "^1.2.12",
+    "node-crypto-gcm": "^1.0.3",
+    "qr-image": "^3.2.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "build": {
+    "appId": "securuscoin.walletshell",
+    "copyright": "Copyright (c) 2019 Rixombea, Macroshock, TurtleCoin Developers, SecurusCoin Project",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "**/*",
+      "!**/docs/*",
+      "!**/bin/*",
+      "!**/service.log",
+      "!**/src/js/*.src.js",
+      "!**/src/js/extras/*.src.js",
+      "!**/js/*.src.js",
+      "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+      "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+      "!**/node_modules/*.d.ts",
+      "!**/node_modules/.bin",
+      "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+      "!.editorconfig",
+      "!**/._*",
+      "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
+      "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
+      "!**/{appveyor.yml,.travis.yml,circle.yml}",
+      "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}"
+    ],
+    "linux": {
+      "artifactName": "${productName}-v${version}-${os}.${ext}",
+      "target": [
+        "AppImage"
+      ],
+      "maintainer": "rixombea (@labaylabay)",
+      "category": "Office",
+      "vendor": "SecurusCoin",
+      "synopsis": "SecurusCoin GUI Wallet"
+    },
+    "win": {
+      "target": "nsis",
+      "publisherName": "SecurusCoin"
+    },
+    "nsis": {
+      "artifactName": "${productName}-v${version}-${os}-${arch}-setup.${ext}",
+      "oneClick": true,
+      "perMachine": false
+    },
+    "mac": {
+      "artifactName": "${productName}-v${version}-${os}-${arch}.${ext}",
+      "category": "public.app-category.business",
+      "target": "zip"
+    }
+  },
+  "postinstall": "./node_modules/.bin/electron-builder install-app-deps"
 }

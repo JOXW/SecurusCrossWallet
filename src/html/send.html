@@ -1,0 +1,58 @@
+<template>
+    <section class="section" id="section-send">
+        <div class="section-contents darkened">
+
+            <div class="div-title">
+                <h2 class="title">Send TurtleCoin</h2>
+            </div>
+            <div class="div-input">
+                <div class="input-wrap">
+                    <h4 class="text-spaced input-required">Recipient Address</h4>
+                    <input tabindex="0" required="required" class="text-block" id="input-send-address" 
+                        placeholder="Required, a valid TRTL address..."
+                    />
+                    <span class="form-help">Type one or more characters to search from address book, or type new address.</span>
+                </div>
+
+                <div class="input-wrap">
+                    <h4 class="text-spaced">Payment ID</h4>
+                    <input tabindex="0" title="Optional" class="text-block" id="input-send-payid" 
+                        placeholder="Optional, a valid payment id for this transfer..."
+                    />
+
+                </div>
+                
+                <div class="input-wrap">
+                    <div class="div-send-amount  inline-block-div half-width">
+                        <h4 class="text-spaced input-required">Amount</h4>
+                        <input tabindex="0" title="Required, amount of TRTL you want to send..." 
+                            required="required" type="number" step="CFG_MIN_SEND" 
+                            min="CFG_MIN_SEND" class="text-block" id="input-send-amount" 
+                            placeholder="CFG_MIN_SEND"
+                        />
+                        <span id="sendFormHelp" class="form-help">Max. amount you can send is 0.00 TRTL</span>
+                        <span tabindex="0" id="sendMaxAmount" class="hidden">send all</span>
+                    </div>
+                    <div class="div-send-fee inline-block-div half-width half-width-end">
+                            <h4 class="text-spaced input-required">Transaction Fee</h4>
+                            <input tabindex="0" title="Required, TRTL amount for transaction fee..." required="required" 
+                                data-noclear="1" value="CFG_MIN_FEE" type="number" step="CFG_MIN_FEE" min="CFG_MIN_FEE" 
+                                class="text-block" id="input-send-fee" placeholder="CFG_MIN_FEE"
+                            />
+                            <span id="sendFormHelpMinFee" class="form-help">Min. fee is CFG_MIN_FEE TRTL</span>
+                    </div>
+                </div>
+                                
+                <div class="input-wrap">
+                    <span class="form-ew form-msg text-spaced-error" id="text-send-error"></span>
+                    <span class="form-ew form-msg text-spaced-warning" id="text-send-warning"></span>
+                    <span class="form-ew form-msg text-spaced-success" id="text-send-success"></span>
+                </div>
+            </div>
+            <div class="action-buttons">
+                    <button type="button" class="form-bt button-green" id="button-send-send">Send</button>
+                    <button type="button" class="form-bt button-red" data-section="section-overview" id="button-send-back">Back</button>
+            </div>
+        </div>
+    </section>
+</template>
