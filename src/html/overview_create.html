@@ -1,7 +1,7 @@
 <template>
     <section class="section" id="section-overview-create">
-        <div class="section-contents darkened" style="margin: 100px">
-            <div class="openWallet">
+        <div class="openWallet" style="margin: 100px"></div>
+            <div class="openWallet" style="margin: 200px">
                 <div class="input-wrap">
                     <h4 class="text-spaced input-required">Select where the wallet file will be stored</h4>
                     <input required="required" data-fileobj="wallet file" 
@@ -21,11 +21,11 @@
                     <span class="form-ew form-msg text-spaced-error" id="text-create-error"></span>
                     <span class="form-ew form-msg text-spaced-success" id="text-create-success"></span>
                 </div>
-            </div>
-            <div class="walletOpenButtons">
-                <button type="button" class="button-openWallet" id="button-create-create">Create</button>
-                <button type="button" class="button-openWallet" data-section="section-welcome" id="button-create-back">Cancel</button>
-            </div>
+                <div class="walletOpenButtons">
+                    <button type="button" class="button-openWallet" id="button-create-create">Create</button>
+                    <button type="button" class="button-openWallet" data-section="section-welcome" id="button-create-back">Cancel</button>
+                </div>
+            </div>          
         </div>
     </section>
 </template>
