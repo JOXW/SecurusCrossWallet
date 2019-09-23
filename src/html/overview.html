@@ -1,6 +1,10 @@
 <template>
-    <section class="section" id="section-overview">
-        <div class="section-contents">
+    <section class="section" id="section-overview"> 
+        <div style="width: 80px; margin-top: 100px; height: 50px">
+            <button onclick="openNav()" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; width: 80px"><span style="padding-right: 15px;">Menue</span></button>
+        </div>      
+        <div style="margin-left: 150px; margin-right: 150px; margin-bottom: 150px">
+            
             <div class="div-overview-address">
                 <div class="input-wrap" style="margin-top:0">
                     <h2 class="title">Address:</h2>
@@ -28,20 +32,20 @@
                     <span class="form-help form-help-qr hidden" id="scan-qr-help">Scan to share your address</span>
                 </div>
             </div>
-            <div class="input-wrap button-wrap">
-                <button tabindex="0" type="button" class="form-bt button-green" 
+            <div style="width: 720px">
+                <button tabindex="0" type="button" class="button-openWallet" 
                     data-section="section-overview-show" 
                     title="Backup your private keys, YOU REALLY HAVE TO DO THIS! (ctrl+e)" 
-                    id="button-overview-showkeys">Backup Keys</button>
-                <button tabindex="0" type="button" class="form-bt button-green" 
+                    id="button-overview-showkeys" style="width: 350px">Backup Keys</button>
+                <button tabindex="0" type="button" class="button-openWallet" 
                     title="Rescan transactions from specific block height. Only do this if you know what you are doing"
-                    id="button-overview-rescan">Rescan</button>
-                <button tabindex="0" type="button" class="form-bt button-green"
+                    id="button-overview-rescan" style="width: 350px">Rescan</button>
+                <button tabindex="0" type="button" class="button-openWallet"
                     title="Perform wallet optimization. Try this if you get &quot;Transaction size too big&quot; error when sending funds" 
-                    id="button-send-optimize">Optimize</button>
-                <button tabindex="0" type="button" class="form-bt  button-green" 
+                    id="button-send-optimize" style="width: 350px">Optimize</button>
+                <button tabindex="0" type="button" class="button-openWallet" 
                     title="Close current wallet, so you can open another wallet (ctrl+x)"
-                    id="button-overview-closewallet">Close</button>
+                    id="button-overview-closewallet" style="width: 350px">Close</button>
                 <div id="fusionProgress" class="fusion-progress hidden">
                     <i class="fas fa-cogs fa-spin"></i> Wallet optimization in progress <i class="fas fa-cogs fa-spin"></i>
                 </div>

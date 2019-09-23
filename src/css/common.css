@@ -1041,10 +1041,11 @@ span.form-help-qr.hidden{
 }
 
 .status-node-info{
-    padding: 0.25rem 1rem;
-    font-size: 0.85rem;
-    color: #fefefe;
-    background: #00632e;
+    /*padding: 0.25rem 1rem;*/
+    background: transparent;
+    color: transparent;
+    /*color: #fefefe;*/
+    /*background: #00632e;*/
     position: absolute;
     width: 100%;
     z-index: 9999;
