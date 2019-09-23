@@ -17,14 +17,12 @@ config.walletFileDefaultExt = 'swc';
 config.walletServiceBinaryFilename = 'securus-service';
 
 // version on the bundled service (securus-service)
-config.walletServiceBinaryVersion = "v1.0.4";
+config.walletServiceBinaryVersion = "v2.0.0";
 
 // config file format supported by wallet service, possible values:
-// ini -->  for turtle service (or its forks) version <= v0.8.3
-// json --> for turtle service (or its forks) version >= v0.8.4
 config.walletServiceConfigFormat = "json";
 
-// default port number for your wallet service (e.g. turtle-service)
+// default port number for your wallet service
 config.walletServiceRpcPort = 18114;
 
 // block explorer url, the [[TX_HASH]] will be substituted w/ actual transaction hash
