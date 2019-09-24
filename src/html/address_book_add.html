@@ -1,6 +1,9 @@
 <template>
         <section class="section" id="section-addressbook-add">
-            <div class="section-contents darkened">
+            <div style="width: 80px; margin-top: 100px; height: 50px">
+                <button onclick="openNav()" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; width: 80px"><span style="padding-right: 15px;">Menue</span></button>
+            </div> 
+            <div style="margin-left: 150px; margin-right: 150px; margin-bottom: 150px">
                 <div class="div-title">
                     <h2 class="title">Add Address Book Entry</h2>
                 </div>
@@ -29,11 +32,11 @@
                         <span class="form-ew form-msg text-spaced-error" id="text-addressbook-error"></span>
                         <span class="form-ew form-msg text-spaced-success" id="text-addressbook-success"></span>
                     </div>
-                </div>
-                <div class="action-buttons">
-                    <button type="button" class="form-bt button-green" id="button-addressbook-save">Save</button>
-                    <button type="button" class="form-bt button-red" data-section="section-addressbook" id="button-addressbook-back">Back</button>
-                </div>
+                    <div>
+                        <button type="button" class="button-openWallet" id="button-addressbook-save">Save</button>
+                        <button type="button" class="button-openWallet" data-section="section-addressbook" id="button-addressbook-back">Back</button>
+                    </div>
+                </div>               
             </div>
     </section>
 </template>

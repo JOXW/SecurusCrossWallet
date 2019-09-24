@@ -1,9 +1,9 @@
 <template>
     <section class="section" id="section-settings">
-        <div class="section-contents darkened">
-            <div class="div-title">
-                <h2 class="title">Settings</h2>
-            </div>
+            <div style="width: 80px; margin-top: 100px; height: 50px">
+                    <button onclick="openNav()" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; width: 80px"><span style="padding-right: 15px;">Menue</span></button>
+                </div>   
+                <div style="margin-left: 150px; margin-right: 150px; margin-bottom: 150px">   
             <div class="div-settings-input default-inputs">
                 <div class="input-wrap">
                         <label class="checkbox-container">
@@ -38,7 +38,7 @@
                     <input tabindex="0" data-selection="openFile" data-targetinput="input-settings-path" required="required"
                         data-initial="service_bin" class="text-block path-input-button" readonly="readonly" id="input-settings-path"
                         placeholder="Required, full path to the turtle-service executable file..." />
-                    <button data-targetinput="input-settings-path" type="button" class="notabindex button-green path-input-button"
+                    <button data-targetinput="input-settings-path" type="button" class="notabindex button-openWallet path-input-button"
                         id="button-settings-browse"><i class="fas fa-folder-open"></i></button>
                 </div>
                 <div class="input-wrap">
@@ -52,11 +52,11 @@
                     <span class="form-ew form-msg text-spaced-error" id="text-settings-error"></span>
                     <span class="form-ew form-msg text-spaced-success" id="text-settings-success"></span>
                 </div>
-            </div>
-            <div class="action-buttons">
-                <button  tabindex="0" type="button" class="form-bt button-green" id="button-settings-save">Save</button>
-                <button  tabindex="0" type="button" class="form-bt button-red" data-section="section-welcome" id="button-settings-back">Back</button>
-            </div>
+                <div>
+                    <button  tabindex="0" type="button" class="button-openWallet" id="button-settings-save">Save</button>
+                    <button  tabindex="0" type="button" class="button-openWallet" data-section="section-welcome" id="button-settings-back">Back</button>
+                </div>
+            </div>          
         </div>
     </section>
 </template>

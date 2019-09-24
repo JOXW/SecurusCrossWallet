@@ -1,13 +1,15 @@
 <template>
     <section class="section" id="section-transactions">
-        <div class="section-contents">
+        <div style="width: 80px; margin-top: 100px; height: 50px">
+            <button onclick="openNav()" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; width: 80px"><span style="padding-right: 15px;">Menue</span></button>
+        </div>   
+        <div style="margin-left: 150px; margin-right: 150px; margin-bottom: 150px">   
             <div class="div-title"><h2 class="title">Transactions <span id="transaction-export" class="hidden">(Export as csv)</span></h2></div>
             <div id="txfiller" class="list-tables">
                 <p>Transaction data not available.<br>
                    Either you haven't made any transaction or your wallet still being synchronized.
                 </p>
             </div>
-            <!-- <div id="transaction-lists" class="list-tables hidden"> -->
             <div id="transaction-lists" class="list-tables hidden">
                 <div class="tx-tools">
                     <div class="tx-search">
@@ -19,13 +21,7 @@
                         <span  tabindex="0" class="csort" data-dir="0" id="txSortAmount">Amount</span>
                     </div>
                 </div>
-                <!-- <div class="transaction-table-wrapper">
-                    <table class="custom-table transaction-list-table" id="transaction-list-table">
-                        <tbody class="list"></tbody>
-                    </table>
-                </div> -->
-
-                <div id="txGrid" class="ag-theme-balham transaction-table-wrapper  transaction-list-table" style="height: 428px;width:100%;">
+                <div id="txGrid" class="transaction-table-wrapper  transaction-list-table" style="height: 428px;width:100%;">
                 </div>
             </div>
             <div class="input-wrap button-wrap" style="padding: 0;margin-top: 1rem;">

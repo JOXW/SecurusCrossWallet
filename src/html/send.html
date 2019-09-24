@@ -1,10 +1,9 @@
 <template>
     <section class="section" id="section-send">
-        <div class="section-contents darkened">
-
-            <div class="div-title">
-                <h2 class="title">Send TurtleCoin</h2>
-            </div>
+        <div style="width: 80px; margin-top: 100px; height: 50px">
+            <button onclick="openNav()" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; width: 80px"><span style="padding-right: 15px;">Menue</span></button>
+        </div>      
+        <div style="margin-left: 150px; margin-right: 150px; margin-bottom: 150px">           
             <div class="div-input">
                 <div class="input-wrap">
                     <h4 class="text-spaced input-required">Recipient Address</h4>
@@ -41,6 +40,10 @@
                             />
                             <span id="sendFormHelpMinFee" class="form-help">Min. fee is CFG_MIN_FEE TRTL</span>
                     </div>
+                    <div style="margin-top: 40px">
+                        <button type="button" class="button-openWallet" id="button-send-send">Send</button>
+                        <button type="button" class="button-openWallet" data-section="section-overview" id="button-send-back">Back</button>
+                    </div>
                 </div>
                                 
                 <div class="input-wrap">
@@ -48,11 +51,7 @@
                     <span class="form-ew form-msg text-spaced-warning" id="text-send-warning"></span>
                     <span class="form-ew form-msg text-spaced-success" id="text-send-success"></span>
                 </div>
-            </div>
-            <div class="action-buttons">
-                    <button type="button" class="form-bt button-green" id="button-send-send">Send</button>
-                    <button type="button" class="form-bt button-red" data-section="section-overview" id="button-send-back">Back</button>
-            </div>
+            </div>            
         </div>
     </section>
 </template>
