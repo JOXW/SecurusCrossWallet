@@ -16,6 +16,7 @@ section.navBar{
     top: 117px;
     left: 0;
     background-color: #111;
+    opacity: 0.9;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 0px;

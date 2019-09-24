@@ -11,7 +11,7 @@ config.appGitRepo = 'https://github.com/JOXW/securus-wallet'; //github rein
 config.daemonDefaultRpcPort = 14115;
 
 // wallet file created by this app will have this extension
-config.walletFileDefaultExt = 'swc';
+config.walletFileDefaultExt = 'wallet';
 
 // change this to match your wallet service executable filename
 config.walletServiceBinaryFilename = 'securus-service';
