@@ -2,14 +2,21 @@ button {
     background-color: #e67e22;
     width: 100%;
     border: none;
-    color: white;
+    color: black;
     padding: 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+	font-family: 'Orbitron', sans-serif;
     margin: 4px 2px;
     cursor: pointer;
+	transition: all 0.4s;
+}
+
+button:hover {
+	color: white;
+
 }
 
 .button-entrance{
