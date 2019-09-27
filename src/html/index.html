@@ -83,26 +83,27 @@
     <!-- #endregion -->
 
     <!-- #region Side Navigation -->
-    <div id="mySidenav" class="sidenav">
+    <div id="mySidenav" class="sidenav" style="font-family: 'Orbitron', sans-serif; font-size: 14x;" >
         <a href="javascript:void(0)" class="closebtn" style="font-size: 35px;" onclick="openNav()">&times;</a>
 
-        <a data-section="section-overview" id="button-section-overview" style="margin-top: 80px;">Wallet</a>
+        <a data-section="section-overview" id="button-section-overview"  style="margin-top: 80px;"><i class="fas fa-wallet"></i>  Wallet</a>
 
-        <a data-section="section-addressbook" id="button-section-addressbook">Adressbook</a>
+        <a data-section="section-addressbook" id="button-section-addressbook"><i class="fas fa-address-book"></i>  Adressbook</a>
 
-        <a data-section="section-send" id="button-section-send">Send</a>
+        <a data-section="section-send" id="button-section-send"><i class="fas fa-share-square"></i>  Send</a>
 
-        <a data-section="section-transactions" id="button-section-transactions">Transactions</a>
+        <a data-section="section-transactions" id="button-section-transactions"><i class="fas fa-exchange-alt"></i>  Transactions</a>
 
-        <a data-section="section-settings" id="button-section-settings">Settings</a>
+        <a data-section="section-settings" id="button-section-settings"><i class="fas fa-cog"></i>  Settings</a>
 
-        <a id="button-section-about">About</a>
+        <a id="button-section-about"><i class="fas fa-info"></i>  About</a>
 
-        <a id="kswitch">Shortcuts</a>
+        <a id="kswitch"><i class="far fa-keyboard"></i>  Shortcuts</a>
     </div>
     <!-- #endregion -->
 
     <!-- #region ScriptNavbar-->
+	
     <script>
         function openNav() {
             if (document.getElementById("mySidenav").style.width == "250px") {

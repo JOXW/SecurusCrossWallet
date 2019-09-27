@@ -16,21 +16,9 @@ button {
     outline:none;
 }
 
-.button:hover{
-    color: white;
-}
-
-.button-menu:hover{
-    color: white;
-}
-
-.button-entrance:hover{
-    color: white;
-}
-
-.button-openWallet:hover{
-    color: white;
-}
+ button:hover {
+	    color: white;
+	}
 
 .button-menu{
     background-color: #262626;
