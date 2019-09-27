@@ -8,10 +8,10 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-	  font-family: 'Orbitron', sans-serif;
+	font-family: 'Orbitron', sans-serif;
     margin: 4px 2px;
     cursor: pointer;
-	  transition: all 0.4s;
+	transition: all 0.4s;
     border: none;
     outline:none;
 }
