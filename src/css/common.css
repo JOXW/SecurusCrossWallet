@@ -1743,7 +1743,6 @@ ul.cnodes li a:hover{
 }
 
 kbd{
-    font-family: monospace;
     display:inline-block;
     background: #fff;
     color: #504e4e;
@@ -1769,7 +1768,6 @@ kbd{
 
 .license-text{
     text-align: left;
-    font-family: monospace;
     height: 110px;
     overflow-x: hidden;
     overflow-y: auto;

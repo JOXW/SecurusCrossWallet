@@ -10,6 +10,15 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    border: none;
+    outline:none;
+}
+
+.button-menu{
+    background-color: #262626;
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
 }
 
 .button-entrance{

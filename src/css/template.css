@@ -41,8 +41,8 @@ section.Wallet{
     border: 1px solid #e67e22;
     border-radius: 15px;
     color: white;
-    /* background-color: rgba(53, 53, 53, 0.39); */
     background: transparent;
+    outline:none;
 }
 
 .path-input {

@@ -1,5 +1,5 @@
 html{
-    font-family: 'Noto Sans', sans-serif;  
+    font-family: 'Orbitron', sans-serif;  
 }
 
 html::before{
@@ -15,8 +15,6 @@ html::before{
 }
 
 html::after{
-    /* background: linear-gradient(90deg, #00803b, #3ca74e 50%, #008e47); */
-    /* background: radial-gradient(circle, white, whitesmoke, #e67e22); */
     background: #262626;
     content: '';
     display: block;
