@@ -1,8 +1,8 @@
 <template>
     <section class="section" id="section-overview"> 
-        <div style="width: 80px; margin-top: 100px; height: 50px">
-            <button onclick="openNav()" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px; width: 80px"><span style="padding-right: 15px;">Menu</span></button>
-        </div>      
+        <div style="margin-top: 65px">
+            <button class="button-menu" onclick="openNav()">&#9776</button>
+        </div>        
         <div style="margin-left: 150px; margin-right: 150px; margin-bottom: 150px">           
             <div class="div-overview-address">
                 <div class="input-wrap" style="margin-top:0">
@@ -18,11 +18,11 @@
                 <div class="div-overview-balance">
                     <h2 class="title">Balance:</h2>
                     <h4 class="text-block" id="balance-available" title="Available Balance">
-                        <i class="fas fa-unlock-alt"></i> TRTL
+                        <i class="fas fa-unlock-alt"></i>
                         <span data-cplabel="Balance" style="float: right; color:#98ef8b;" class="tctcl">0.00</span>
                     </h4>
                     <h4 class="text-block" id="balance-locked" title="Unconfirmed/Locked Balance">
-                        <i class="fas fa-lock"></i> TRTL
+                        <i class="fas fa-lock"></i>
                         <span data-cplabel="Locked balance" style="float: right; color:#f39c12;" class="tctcl">0.00</span>
                     </h4>
                 </div>

@@ -8,15 +8,21 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-	font-family: 'Orbitron', sans-serif;
+	  font-family: 'Orbitron', sans-serif;
     margin: 4px 2px;
     cursor: pointer;
-	transition: all 0.4s;
+	  transition: all 0.4s;
+    button:hover {
+	    color: white;
+    border: none;
+    outline:none;
 }
 
-button:hover {
-	color: white;
-
+.button-menu{
+    background-color: #262626;
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
 }
 
 .button-entrance{
