@@ -62,7 +62,7 @@
       "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
       "!**/{appveyor.yml,.travis.yml,circle.yml}",
       "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
-      "build/icon.*"
+      "**/*, \"build/icon.*\""
     ],
     "linux": {
       "artifactName": "${productName}-v${version}-${os}.${ext}",
@@ -76,7 +76,8 @@
     },
     "win": {
       "target": "nsis",
-      "publisherName": "SecurusCoin"
+      "publisherName": "SecurusCoin",
+      "icon": "src/assets/icon.ico"
     },
     "nsis": {
       "artifactName": "${productName}-v${version}-${os}-${arch}-setup.${ext}",
