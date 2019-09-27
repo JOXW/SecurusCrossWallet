@@ -12,10 +12,24 @@ button {
     margin: 4px 2px;
     cursor: pointer;
 	  transition: all 0.4s;
-    button:hover {
-	    color: white;
     border: none;
     outline:none;
+}
+
+.button:hover{
+    color: white;
+}
+
+.button-menu:hover{
+    color: white;
+}
+
+.button-entrance:hover{
+    color: white;
+}
+
+.button-openWallet:hover{
+    color: white;
 }
 
 .button-menu{
