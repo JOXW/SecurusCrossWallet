@@ -2098,7 +2098,7 @@ function handleSendTransfer() {
                         <dd class="dd-ib">${total} ${config.assetTicker}</dd>
                     </dl>
                 </div>
-                <div class="div-panel-buttons">
+                <div class="div-panel-buttons" style="width: 450px">
                     <button data-target='#tf-dialog' type="button" class="form-bt button-red dialog-close-default" id="button-send-ko">Cancel</button>
                     <button data-target='#tf-dialog' type="button" class="form-bt button-green" id="button-send-ok">OK, Send it!</button>
                 </div>
